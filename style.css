@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  padding: 0 50px;
+}
+
+div {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+label {
+  flex: 2;
+}
+
+input {
+  flex: 4;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li button {
+  font-size: 0.6rem;
+  margin-left: 10px;
+}
