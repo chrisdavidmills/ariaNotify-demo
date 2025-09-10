@@ -17,7 +17,7 @@ function addItemToList(item, price) {
   btn.addEventListener("click", (e) => {
     const listItem = e.target.parentNode;
     total -= Number(listItem.getAttribute("data-price"));
-    totalOutput.ariaNotify(`${listItem.getAttribute("data-item")} removed`, {
+    document.ariaNotify(`${listItem.getAttribute("data-item")} removed`, {
       priority: "high",
     });
     updateTotal();
@@ -30,7 +30,7 @@ function addItemToList(item, price) {
 
 function updateTotal() {
   totalOutput.textContent = `Total: £${Number(total).toFixed(2)}`;
-  totalOutput.ariaNotify(`Total is now £${total}`, {
+  document.ariaNotify(`Total is now £${total}`, {
     priority: "high",
   });
 }
@@ -41,7 +41,7 @@ form.addEventListener("submit", (e) => {
   addItemToList(item.value, price.value);
   total += Number(price.value);
 
-  totalOutput.ariaNotify(
+  document.ariaNotify(
     `Item ${item.value}, price £${price.value}, added to list`,
     {
       priority: "high",
