@@ -51,7 +51,6 @@ form.addEventListener("submit", (e) => {
 
   addItemToList(item.value, price.value);
   total += Number(price.value);
-  updateTotal();
 
   totalOutput.ariaNotify(
     `Item ${item.value}, price ${numberToSpokenPrice(
@@ -61,6 +60,8 @@ form.addEventListener("submit", (e) => {
       priority: "high",
     }
   );
+
+  updateTotal();
 
   item.value = "";
   price.value = "";
