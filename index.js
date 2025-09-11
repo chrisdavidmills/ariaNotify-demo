@@ -19,7 +19,9 @@ function addItemToList(item, price) {
     total -= Number(listItem.getAttribute("data-price"));
     updateTotal();
     document.ariaNotify(
-      `${listItem.getAttribute("data-item")} removed. Total is now £${total}.`,
+      `${listItem.getAttribute(
+        "data-item"
+      )} removed. Total is now £${total.toFixed(2)}.`,
       {
         priority: "high",
       }
@@ -43,7 +45,9 @@ form.addEventListener("submit", (e) => {
   updateTotal();
 
   document.ariaNotify(
-    `Item ${item.value}, price £${price.value}, added to list. Total is now £${total}.`,
+    `Item ${item.value}, price £${
+      price.value
+    }, added to list. Total is now £${total.toFixed(2)}.`,
     {
       priority: "high",
     }
